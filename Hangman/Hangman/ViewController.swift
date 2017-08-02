@@ -33,10 +33,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(didChangeorientation), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         drawingView.layer.borderColor = UIColor.white.cgColor
         drawingView.layer.borderWidth = 2.0
         setupTextField()
         livesLeft = lives
+    }
+    
+    func didChangeorientation() {
+    
+        for (i, value) in characterViews.enumerated() {
+        
+            let labelWidth = wordView.frame.width / CGFloat(charactersInWord.count * 2)
+            let labelHeight = wordView.frame.height / 2
+            
+            value.frame = CGRect(x: labelWidth * (CGFloat(i) + 0.5) + (CGFloat(i) * labelWidth), y: labelHeight - labelHeight / 2, width: labelWidth, height: labelHeight)
+        }
     }
     
     func setupTextField(){
