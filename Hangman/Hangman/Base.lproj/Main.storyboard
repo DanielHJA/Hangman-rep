@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -107,28 +108,22 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBj-W5-ASl" customClass="Hangman_View" customModule="Hangman" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="220" width="375" height="220"/>
+                                <rect key="frame" x="0.0" y="220" width="375" height="267"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wQ-eV-h3c" customClass="Hangman_View" customModule="Hangman" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="440" width="375" height="227"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gBj-W5-ASl" secondAttribute="height" multiplier="125:89" id="lRs-u5-rc6"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Yxs-56-zJr" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.33" id="3jQ-5a-MKx"/>
                             <constraint firstAttribute="trailing" secondItem="Yxs-56-zJr" secondAttribute="trailing" id="6Uz-da-Rlc"/>
-                            <constraint firstAttribute="trailing" secondItem="gBj-W5-ASl" secondAttribute="trailing" id="Cc1-TB-IM1"/>
                             <constraint firstItem="Yxs-56-zJr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="EuZ-nS-fvu"/>
-                            <constraint firstItem="0wQ-eV-h3c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SxY-FW-Bmq"/>
-                            <constraint firstItem="gBj-W5-ASl" firstAttribute="height" secondItem="Yxs-56-zJr" secondAttribute="height" id="Uha-19-hDq"/>
-                            <constraint firstAttribute="trailing" secondItem="0wQ-eV-h3c" secondAttribute="trailing" id="VvK-Wh-c2w"/>
-                            <constraint firstItem="0wQ-eV-h3c" firstAttribute="top" secondItem="gBj-W5-ASl" secondAttribute="bottom" id="jTh-Pu-y7f"/>
-                            <constraint firstItem="gBj-W5-ASl" firstAttribute="top" secondItem="Yxs-56-zJr" secondAttribute="bottom" id="jmH-3J-rbL"/>
+                            <constraint firstItem="gBj-W5-ASl" firstAttribute="top" secondItem="8lI-H5-Nxb" secondAttribute="bottom" id="Jnh-ep-5N9"/>
+                            <constraint firstItem="gBj-W5-ASl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i5y-UU-JQu"/>
+                            <constraint firstItem="gBj-W5-ASl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="jeh-0b-Fb5"/>
                             <constraint firstItem="Yxs-56-zJr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mAV-9g-vQC"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0wQ-eV-h3c" secondAttribute="bottom" id="qXq-Xz-ue2"/>
-                            <constraint firstItem="gBj-W5-ASl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ymn-Uj-2KB"/>
                         </constraints>
                     </view>
                     <connections>

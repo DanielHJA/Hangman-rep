@@ -135,6 +135,7 @@ class Hangman_View: UIView {
     func returnLayer() -> CAShapeLayer {
     
         let shapeLayer = CAShapeLayer()
+        shapeLayer.frame = self.bounds
         shapeLayer.lineWidth = 7.0
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeColor = UIColor.white.cgColor
