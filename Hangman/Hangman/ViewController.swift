@@ -53,7 +53,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
    
         hangman = drawingView
         
-        let randomNumber = random(upper: self.words.count)
+        let randomNumber = random(upper: self.words.count - 1)
         
         wordInPlay = words[randomNumber]
         
