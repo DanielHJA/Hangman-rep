@@ -140,7 +140,6 @@ class Hangman_View: UIView {
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeColor = UIColor.white.cgColor
         shapeLayer.lineCap = kCALineCapRound // Round edges of stroke
-    
         return shapeLayer
     }
     
