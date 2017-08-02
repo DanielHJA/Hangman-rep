@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,21 +20,21 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yxs-56-zJr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="105.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hw4-wD-Xh8">
-                                        <rect key="frame" x="-0.5" y="73.5" width="375" height="73"/>
+                                        <rect key="frame" x="-0.5" y="35" width="568" height="35"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgR-eK-0tH">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="73.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="35"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1u-dv-PTG">
-                                                <rect key="frame" x="270" y="15.5" width="97" height="41"/>
+                                                <rect key="frame" x="463" y="-3" width="97" height="41"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
                                                 <state key="normal" title="New Word">
                                                     <color key="titleColor" red="1" green="0.90193209259999996" blue="0.79013300639999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -51,16 +51,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lI-H5-Nxb">
-                                        <rect key="frame" x="0.0" y="146.5" width="375" height="73.5"/>
+                                        <rect key="frame" x="0.0" y="70" width="568" height="35.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8G-5V-9oG">
-                                                <rect key="frame" x="8" y="24.5" width="41" height="24.5"/>
+                                                <rect key="frame" x="8" y="5" width="41" height="25"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTv-Bk-8ug">
-                                                <rect key="frame" x="312" y="16.5" width="55" height="41"/>
+                                                <rect key="frame" x="505" y="-3" width="55" height="41"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
                                                 <state key="normal" title="Guess">
                                                     <color key="titleColor" red="1" green="0.90193209259999996" blue="0.79013300639999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -70,7 +70,7 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d8B-zz-5Mj">
-                                                <rect key="frame" x="264" y="17" width="40" height="40"/>
+                                                <rect key="frame" x="457" y="-3" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="MB8-IT-fDB"/>
                                                     <constraint firstAttribute="width" constant="40" id="dqo-3I-ftr"/>
@@ -108,10 +108,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBj-W5-ASl" customClass="Hangman_View" customModule="Hangman" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="220" width="375" height="267"/>
+                                <rect key="frame" x="201.5" y="115.5" width="165" height="106"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="gBj-W5-ASl" secondAttribute="height" multiplier="125:89" id="lRs-u5-rc6"/>
+                                    <constraint firstAttribute="width" secondItem="gBj-W5-ASl" secondAttribute="height" multiplier="343:220" id="fan-ET-psF"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -119,10 +119,10 @@
                         <constraints>
                             <constraint firstItem="Yxs-56-zJr" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.33" id="3jQ-5a-MKx"/>
                             <constraint firstAttribute="trailing" secondItem="Yxs-56-zJr" secondAttribute="trailing" id="6Uz-da-Rlc"/>
+                            <constraint firstItem="gBj-W5-ASl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8dm-cK-10A"/>
                             <constraint firstItem="Yxs-56-zJr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="EuZ-nS-fvu"/>
-                            <constraint firstItem="gBj-W5-ASl" firstAttribute="top" secondItem="8lI-H5-Nxb" secondAttribute="bottom" id="Jnh-ep-5N9"/>
-                            <constraint firstItem="gBj-W5-ASl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i5y-UU-JQu"/>
-                            <constraint firstItem="gBj-W5-ASl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="jeh-0b-Fb5"/>
+                            <constraint firstItem="gBj-W5-ASl" firstAttribute="height" secondItem="Yxs-56-zJr" secondAttribute="height" id="Uha-19-hDq"/>
+                            <constraint firstItem="gBj-W5-ASl" firstAttribute="top" secondItem="Yxs-56-zJr" secondAttribute="bottom" constant="10" id="bui-8f-AHC"/>
                             <constraint firstItem="Yxs-56-zJr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mAV-9g-vQC"/>
                         </constraints>
                     </view>
