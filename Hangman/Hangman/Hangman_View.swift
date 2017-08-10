@@ -15,6 +15,22 @@ class Hangman_View: UIView {
     var viewLayer: CAShapeLayer? = nil
     var viewPath: UIBezierPath? = nil
     
+    override func draw(_ rect: CGRect) {
+        
+        layer.borderColor = UIColor.white.cgColor
+        layer.borderWidth = 2.0
+    }
+    
+    /*init (ba: String, a: CGRect) {
+    
+     Init, then call super draw
+        super.init(frame: a)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+            super.init(coder: aDecoder)
+    }*/
+    
     func animate(number: Int){
 
         viewPath = UIBezierPath()

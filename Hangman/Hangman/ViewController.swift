@@ -19,7 +19,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     let words: [String] = ["Cat", "Dog", "Elephant", "Whisky", "Beer", "Wild", "Hell", "Monkey", "Intertrajectory", "Military", "Night", "Bunny", "Toys", "Mommy", "Sweden"]
     var wordInPlay: String = ""
     var charactersInWord: [String] = []
-    var hangman: Hangman_View?
     var lives: Int = 8
     var livesLeft: Int = 0 {
     
@@ -32,12 +31,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+        setupWord(word:"Minnesota")
+    }
+    
+    func setup() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(didChangeorientation), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
-        drawingView.layer.borderColor = UIColor.white.cgColor
-        drawingView.layer.borderWidth = 2.0
         setupTextField()
         livesLeft = lives
+        
     }
     
     func didChangeorientation() {
@@ -60,23 +63,28 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func newWord(_ sender: UIButton) {
+        setupWord(word: random(array: words))
+    }
+    
+    func setupWord(word: String){
    
         reset()
-   
-        hangman = drawingView
         
-        let randomNumber = random(upper: self.words.count - 1)
-        
-        wordInPlay = words[randomNumber]
+        wordInPlay = word
         
         charactersInWord = wordInPlay.characters.map { (String($0)) }
-                
+        
         createCharacterViews()
         
     }
     
+    func random(array: [String]) -> String {
+        let randomNumber = random(upper: self.words.count - 1)
+        return array[randomNumber]
+    }
+    
     func reset(){
-
+        
         for subview in wordView.subviews {
             subview.removeFromSuperview()
         }
@@ -86,11 +94,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         wordInPlay = ""
         self.livesLeft = lives
         
-        if let hangmanView = hangman {
+        drawingView.reset()
         
-            hangmanView.reset()
-            
-        }
     }
     
     func createCharacterViews() {
@@ -110,9 +115,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func guessLetter(_ sender: UIButton) {
         
-        guard let letter = self.guessingTextfield.text, !letter.isEmpty, !charactersInWord.isEmpty else {
+        guard let guess = self.guessingTextfield.text, !guess.isEmpty, !charactersInWord.isEmpty else {
             return
         }
+        
+        userDidGuess(letter: guess)
+    }
+    
+    func userDidGuess(letter: String) {
         
         if arrayContainsString(array: charactersInWord, string: letter) {
             
@@ -121,20 +131,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 if  isCasinsensitiveCharacter(char: letter, equalTo: charactersInWord[index]){
                     
                     characterViews[index].text = letter
-                
+                    
                 }
             }
             
         } else {
             
-            if let hangmanView = hangman {
-            
-                hangmanView.animate(number: self.lives - self.livesLeft)
-                
-            }
+            drawingView.animate(number: self.lives - self.livesLeft)
             
             self.livesLeft -= 1
-
+            
         }
         
         self.guessingTextfield.text = ""

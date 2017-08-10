@@ -7,13 +7,12 @@
 //
 
 import XCTest
+@testable import Hangman
 
 class HangmanUITests: XCTestCase {
-        
+    
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
         
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
@@ -28,9 +27,58 @@ class HangmanUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testMyTest() {
+    
+        
+        let app = XCUIApplication()
+        let textField = app.textFields["guessingTextField"]
+        
+        textField.tap()
+        textField.typeText("K")
+        
+        let guessButton = app.buttons["Guess"]
+        guessButton.tap()
+        app.keys["Y"].tap()
+        textField.typeText("U")
+        guessButton.tap()
+        app.keys["O"].tap()
+        textField.typeText("O")
+        guessButton.tap()
+        app.keys["N"].tap()
+        textField.typeText("N")
+        guessButton.tap()
+        app.keys["M"].tap()
+        textField.typeText("M")
+        guessButton.tap()
+        app.keys["I"].tap()
+        textField.typeText("I")
+        guessButton.tap()
+        app.keys["E"].tap()
+        textField.typeText("E")
+        guessButton.tap()
+        app.keys["Q"].tap()
+        textField.typeText("Q")
+        guessButton.tap()
+        app.keys["R"].tap()
+        textField.typeText("R")
+        guessButton.tap()
+        app.keys["P"].tap()
+        textField.typeText("P")
+        guessButton.tap()
+        textField.typeText("K")
+        guessButton.tap()
+        app.keys["B"].tap()
+        textField.typeText("B")
+        guessButton.tap()
+        app.keys["T"].tap()
+        textField.typeText("T")
+        guessButton.tap()
+        app.keys["D"].tap()
+        textField.typeText("D")
+        guessButton.tap()
+        app.buttons["New Word"].tap()
+
+        
     }
     
 }
